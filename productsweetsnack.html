@@ -421,6 +421,8 @@ font-size:18px;
 
 }
 
+
+
 </style>
 </head>
 <body>
@@ -445,13 +447,15 @@ font-size:18px;
 
             <p class="description" id="productDescription"></p>
 
+
 <ul class="size-list">
-     <li>Chocolate Bars — KitKat • Mars • Snickers • Twix</li> 
-     <li>Cookies & Biscuits — LU • Peek Freans • Bisconni</li>
-      <li>Cakes • Wafers • Cream Biscuits</li> <li>Perfect for Parties, Tea Time & Daily Treats</li> 
-      <li>Original & Trusted Brands</li>
-       <li>Fast Delivery Available</li> 
-    </ul>
+<li>Soap Bar — 90g / 120g</li>
+<li>Face Wash — 50ml / 100ml</li>
+<li>Shampoo — 180ml / 360ml / 650ml</li>
+<li>Original & Trusted Brands</li>
+<li>Suitable For Daily Use</li>
+<li>Fast Delivery Available</li>
+</ul>
 
             <button class="buy-btn" id="addCartBtn">
                 Add To Cart
@@ -467,8 +471,7 @@ font-size:18px;
 
     <div class="section-title">
         <h2>You May Also Like</h2>
- <p>Discover more chocolates, biscuits, cookies and sweet favorites.</p>
-
+<p>Explore more personal care products.</p>
     </div>
 
     <div class="related-products" id="relatedProducts">
@@ -487,16 +490,17 @@ font-size:18px;
 
     <div class="why-grid">
 
-<div class="why-card">
-    <div class="why-icon">🚚</div>
-    <h3>Fast Delivery</h3>
-    <p>Get your favorite chocolates, biscuits and sweet treats delivered quickly and safely.</p>
+        <div class="why-card">
+            <div class="why-icon">🚚</div>
+            <h3>Fast Delivery</h3>
+            <p>Quick and reliable delivery at your doorstep.</p>
+        </div>
+
+       <div class="why-card">
+<div class="why-icon">🥛</div>
+<h3>Fresh Dairy</h3>
+<p>Fresh milk, tea, yogurt and dairy products from trusted brands.</p>
 </div>
-
- <div class="why-card"> <div class="why-icon">🍫</div>
-  <h3>Premium Sweet Treats</h3> 
-  <p>Enjoy delicious chocolates, biscuits, cookies and cakes from trusted brands.</p> </div>
-
         <div class="why-card">
             <div class="why-icon">💳</div>
             <h3>Secure Payment</h3>
@@ -513,220 +517,139 @@ font-size:18px;
 
 </section>
 
-
 <script>
-
-
-const products = {
-
-kitkat:{
-name:"KitKat Chocolate Bar",
-price:"Rs. 120",
-image:"snack sweet/kitkat 1 .jpeg",
-description:"Crispy wafer fingers covered with smooth milk chocolate. A perfect sweet treat for any time of the day."
+    const products ={
+   skinwhite:{
+name:"Skin White Face Wash",
+price:"Rs. 550",
+image:"skin_white-removebg-preview.png",
+description:"Gentle face wash that removes dirt and oil while keeping your skin fresh and glowing."
+},
+   skinwhite:{
+name:"Skin White saop",
+price:"Rs. 126",
+image:"skin saop.webp",
+description:"Gentle face wash that removes dirt and oil while keeping your skin fresh and glowing."
 },
 
-mms:{
-name:"M&M's Chocolate",
-price:"Rs. 250",
-image:"snack sweet/mms .jpeg",
-description:"Colorful candy-coated milk chocolate bites loved by kids and adults alike."
+
+ponds:{
+name:"POND'S Face Wash",
+price:"Rs. 520",
+image:"POND-removebg-preview.png",
+description:"Daily face wash for clean, soft and refreshed skin."
 },
 
-twix:{
-name:"Twix Chocolate Bar",
+goldenpearl:{
+name:"Golden Pearl Face Wash",
+price:"Rs. 395",
+image:"Golden-Pearl-Daily-Herbal-Face-Wash-Deep--removebg-preview.png",
+description:"Deep cleansing herbal face wash for healthy looking skin."
+},
+
+goldenpearlmen:{
+name:"Golden Pearl Men Face Wash",
+price:"Rs. 420",
+image:"golden-pearl-face-wash-men.png",
+description:"Specially made for men to remove excess oil and dust."
+},
+
+luxsoap:{
+name:"Lux Soap",
+price:"Rs. 210",
+image:"lux-nourished-removebg-preview.png",
+description:"Beauty soap with a smooth and refreshing fragrance."
+},
+
+lifebuoysoap:{
+name:"Lifebuoy Soap",
 price:"Rs. 180",
-image:"snack sweet/twix 1 ).jpg",
-description:"Crunchy biscuit topped with caramel and coated in delicious milk chocolate."
+image:"lifebuay_soap-removebg-preview.png",
+description:"Trusted antibacterial soap for everyday family protection."
 },
 
-bounty:{
-name:"Bounty Chocolate",
-price:"Rs. 180",
-image:"snack sweet/bounty 11 pack.webp",
-description:"Soft coconut filling wrapped in rich milk chocolate for a tropical sweet taste."
+safeguardsoap:{
+name:"Safeguard Soap",
+price:"Rs. 195",
+image:"safeguardjpg-removebg-preview.png",
+description:"Provides effective germ protection with a fresh feeling."
 },
 
-mars:{
-name:"Mars Chocolate Bar",
-price:"Rs. 180",
-image:"snack sweet/mars 1 .jpg",
-description:"A delicious combination of nougat, caramel and milk chocolate in every bite."
-},
-
-snickers:{
-name:"Snickers Chocolate",
-price:"Rs. 180",
-image:"snack sweet/snickers .jpg",
-description:"Roasted peanuts, caramel and nougat covered with creamy milk chocolate."
-},
-
-galaxy:{
-name:"Galaxy Chocolate",
+dovesoap:{
+name:"Dove Soap",
 price:"Rs. 220",
-image:"snack sweet/1Galaxy_-_Chocolate_Bar_webp.webp",
-description:"Smooth and creamy milk chocolate with a rich melt-in-your-mouth taste."
+image:"dove_soap90g-removebg-preview.png",
+description:"Moisturizing beauty bar for soft and healthy skin."
 },
 
-jubilee:{
-name:"Jubilee Chocolate",
-price:"Rs. 100",
-image:"snack sweet/jubilee.png",
-description:"Classic chocolate bar with a rich cocoa flavor, perfect for everyday enjoyment."
+vitalsoap:{
+name:"Vital Soap Pack",
+price:"Rs. 340",
+image:"-Soap-Pack1-removebg-preview.png",
+description:"Family soap pack suitable for daily use."
 },
 
-abcpartypack:{
-name:"ABC Party Pack 42g",
-price:"Rs. 60",
-image:"snack sweet/party pack abc 42g.png",
-description:"A colorful party pack filled with delicious sweet treats for sharing."
+lifebuoystrong:{
+name:"Lifebuoy Naturally Strong Shampoo",
+price:"Rs. 899",
+image:"lifebuoy-shampoo-naturally-strong-650ml-removebg-preview.png",
+description:"Strong hair formula enriched with natural ingredients."
 },
 
-dairymilk:{
-name:"Cadbury Dairy Milk",
-price:"Rs. 100",
-image:"snack sweet/dairy mile 100 walii.jpg",
-description:"Rich and creamy Cadbury Dairy Milk chocolate made with smooth milk chocolate."
+lifebuoyherbal:{
+name:"Lifebuoy Herbal Shampoo",
+price:"Rs. 399",
+image:"lifebuoy_shampoo_herbal_200ml-removebg-preview.png",
+description:"Herbal shampoo for clean and healthy hair."
 },
 
-traditionwafer:{
-name:"Tradition Chocolate Wafer",
-price:"Rs. 80",
-image:"snack sweet/tradition teste jaaaliisss).jpg",
-description:"Light crispy wafers layered with delicious chocolate cream."
+clearmen:{
+name:"Clear Men Shampoo",
+price:"Rs. 999",
+image:"clear-men-cool-removebg-preview.png",
+description:"Powerful anti-dandruff shampoo specially for men."
 },
 
-jiggles:{
-name:"Jiggles Candy",
-price:"Rs. 50",
-image:"snack sweet/jiggales.jpg",
-description:"Fun fruity chewy candy with a sweet and enjoyable taste."
+meclay:{
+name:"Meclay London Shampoo",
+price:"Rs. 699",
+image:"meclay-london-removebg-preview.png",
+description:"Premium shampoo for smooth and shiny hair."
 },
 
-cocomo:{
-name:"Bisconni Cocomo",
-price:"Rs. 50",
-image:"snack sweet/bisconni-cocomo-.webp",
-description:"Crunchy chocolate-filled biscuits with a rich cocoa flavor, perfect for tea time."
+babyshampoo:{
+name:"Baby Shampoo",
+price:"Rs. 450",
+image:"baby-shampoo-removebg-preview.png",
+description:"Gentle tear-free shampoo for babies."
 },
 
-chotato:{
-name:"Chotato Chocolate Biscuit",
-price:"Rs. 40",
-image:"snack sweet/chotatoo .jpg",
-description:"Delicious chocolate biscuits with a crispy texture and sweet chocolate taste."
+loreal:{
+name:"L'Oréal Elvive Shampoo",
+price:"Rs. 1499",
+image:"LOreal-Elvive-Total-Repair-removebg-preview (1).png",
+description:"Total Repair shampoo for damaged hair."
 },
 
-lubutter:{
-name:"LU Butter Biscuits",
-price:"Rs. 70",
-image:"snack sweet/butter LU.jpg",
-description:"Classic buttery biscuits with a rich flavor, perfect for tea and everyday snacking."
+sunsilk:{
+name:"Sunsilk Thick & Long Shampoo",
+price:"Rs. 799",
+image:"Sunsilk-Thick-Long-Shampoo-removebg-preview.png",
+description:"Helps hair look thicker, longer and healthier."
 },
 
-buttercookies:{
-name:"Butter Cookies",
-price:"Rs. 180",
-image:"snack sweet/cookies ban.jpg",
-description:"Premium butter cookies baked to perfection with a soft, buttery taste."
+headshoulders:{
+name:"Head & Shoulders Shampoo",
+price:"Rs. 999",
+image:"shulders_hire-removebg-preview.png",
+description:"Trusted anti-dandruff shampoo for everyday freshness."
 },
 
-lucandi:{
-name:"LU Candi Biscuits",
-price:"Rs. 60",
-image:"snack sweet/candii LUjpg.jpg",
-description:"Sweet crunchy biscuits from LU, loved by all ages for their classic taste."
-},
-
-lugala:{
-name:"LU Gala Biscuits",
-price:"Rs. 80",
-image:"snack sweet/Gala LU.jpg",
-description:"Crunchy sandwich biscuits with a delicious chocolate cream filling."
-},
-
-clusoteddycake:{
-name:"Cluso Teddy Cake",
-price:"Rs. 60",
-image:"snack sweet/cluso teddy cake.jpg",
-description:"Soft and fluffy teddy cake with a delicious chocolate filling, perfect for kids and tea time."
-},
-
-peekfreans:{
-name:"Peek Freans Biscuits",
-price:"Rs. 80",
-image:"snack sweet/peek-freans.jpg",
-description:"Classic crispy biscuits from Peek Freans, loved for their rich taste and quality."
-},
-
-buttercookiespremium:{
-name:"Butter Cookies Premium",
-price:"Rs. 250",
-image:"snack sweet/8964003590635.webp",
-description:"Premium butter cookies with a rich buttery flavor and melt-in-your-mouth texture."
-},
-
-click:{
-name:"Click Chocolate Bar",
-price:"Rs. 70",
-image:"snack sweet/click .jpg",
-description:"Crunchy wafer layers coated with smooth milk chocolate for a delightful snack."
-},
-
-smiledonutcake:{
-name:"Smile Chocolate Donut Cake",
-price:"Rs. 80",
-image:"snack sweet/smile choacoate dount cake.jpeg",
-description:"Soft donut-style chocolate cake with a delicious cocoa flavor, perfect for dessert lovers."
-},
-
-smilecake:{
-name:"Smile Cake",
-price:"Rs. 60",
-image:"snack sweet/smile cake.jpg",
-description:"Soft sponge cake with a sweet creamy flavor, perfect for tea time and everyday enjoyment."
-},
-
-peekfreanschocolate:{
-name:"Peek Freans Chocolate Biscuits",
-price:"Rs. 90",
-image:"snack sweet/peekkkkk).webp",
-description:"Crunchy chocolate biscuits filled with rich cocoa flavor for a delicious snack."
-},
-
-chocolatecookies:{
-name:"Chocolate Cookies",
-price:"Rs. 100",
-image:"snack sweet/shochlate.webp",
-description:"Freshly baked chocolate cookies with a rich cocoa taste and crispy texture."
-},
-
-chocolatewafer:{
-name:"Chocolate Wafer",
-price:"Rs. 80",
-image:"snack sweet/ccfa.webp",
-description:"Light crispy wafers layered with smooth chocolate cream for a delightful treat."
-},
-
-peekfreanssandwich:{
-name:"Peek Freans Sandwich Biscuits",
-price:"Rs. 70",
-image:"snack sweet/peek 2.jpg",
-description:"Crunchy sandwich biscuits with a smooth sweet cream filling."
-},
-
-peekfreanscream:{
-name:"Peek Freans Cream Biscuits",
-price:"Rs. 70",
-image:"snack sweet/peek .jpg",
-description:"Classic cream biscuits with a crispy texture and delicious creamy filling."
-},
-
-doublechocolicious:{
-name:"Peek Freans Double Chocolicious",
-price:"Rs. 120",
-image:"snack sweet/Peek_20Freans_20Double_20Chocolicious_webp.webp",
-description:"Double chocolate sandwich biscuits with rich chocolate cream for an extra chocolaty experience."
+tresemme:{
+name:"TRESemmé Shampoo",
+price:"Rs. 1350",
+image:"tresemme_shampoo-removebg-preview (1).png",
+description:"Salon-quality shampoo for smooth and manageable hair."
 }
 
 };
@@ -734,16 +657,13 @@ description:"Double chocolate sandwich biscuits with rich chocolate cream for an
 const params = new URLSearchParams(window.location.search);
 const id = params.get("product");
 const product = products[id];
-
-if(product){
-
+document.getElementById("productImage").src = product.image;
 document.getElementById("productName").textContent = product.name;
 document.getElementById("productPrice").textContent = product.price;
 document.getElementById("productDescription").textContent = product.description;
-document.getElementById("productImage").src = product.image;
-document.getElementById("productImage").alt = product.name;
 
-};
+
+
 
 /* ===========================================
    Related Products (Random)
@@ -762,9 +682,7 @@ if(!container) return;
 
 const current = params.get("product");
 
-// const ids = Object.keys(products).filter(id => id !== current);
-const ids = Object.keys(products.surf).filter(id => id !== current);
-
+const ids = Object.keys(products).filter(id => id !== current);
 
 ids.sort(() => Math.random() - 0.5);
 
@@ -786,7 +704,7 @@ container.innerHTML += `
 
 <p>${item.price}</p>
 
-<a href="productsweetsnack.html?product=${id}">
+<a href="productshampoo.html?product=${id}">
 View Details
 </a>
 
