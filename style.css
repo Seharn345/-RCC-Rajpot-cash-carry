@@ -718,9 +718,6 @@ background-color: rgb(255, 253, 253);
     font-weight:bold;
 }
 
-
-
-
     .product-card{
     opacity:0;
     transform:translateY(40px);
@@ -740,7 +737,6 @@ transform:translateY(0);
 }
 
 }
-
 
 /*==========================
    PREMIUM BRANDS SECTION
@@ -1459,54 +1455,36 @@ transform:scale(1.15);
 }
 
 .social-icons a:hover{
-
     background:#ff9500;
-
     color:white;
-
     transform:translateY(-6px) rotate(8deg);
 
     box-shadow:0 10px 30px rgba(255,136,0,.45);
-
 }
 
 .footer-bottom{
-
     text-align:center;
-
-    padding:22px;
-
+   padding:22px;
     border-top:1px solid rgba(255,255,255,.08);
-
     color:#9d9d9d;
-
     font-size:15px;
 
 }
-
 @media(max-width:768px){
 
 .footer{
-
 text-align:center;
-
 }
 
 .social-icons{
-
 justify-content:center;
-
 }
 
 .footer-box a:hover{
-
 transform:none;
-
 }
 
 }
-
-
 .footer-divider{
 
 height:2px;
@@ -1523,5 +1501,40 @@ transparent
 margin-top:80px;
 
 opacity:.7;
+
+}
+
+@media (max-width:768px){
+
+.navbar{
+
+padding:28px 8%;
+
+}
+
+.logo img{
+
+width:90px;
+
+}
+
+.hamburger{
+
+display:block;
+font-size:34px;
+
+}
+
+.nav-links{
+
+top:95px;
+
+}
+
+.nav-links li a{
+
+font-size:19px;
+
+}
 
 }
